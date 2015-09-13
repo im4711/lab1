@@ -39,8 +39,20 @@ and open the template in the editor.
         $second->add_grade(95);
         $second->add_grade(80);
         $second->add_grade(50);
-        #add Albert to the student array
+        # add Albert to the student array
         $students['a456'] = $second;
+        
+        # create myself along with my emails and grades
+        $third = new Student();
+        $third->surname = "Marquez";
+        $third->first_name = "Ig";
+        $third->add_email('main', 'igmarquez@email.com');
+        $third->add_email('school', 'imarquez1@my.bcit.ca');
+        $third->add_grade(75);
+        $third->add_grade(50);
+        $third->add_grade(25);
+        # add myself to the student array
+        $students['f127'] = $third;
         
         #sort the student array
         ksort($students);
