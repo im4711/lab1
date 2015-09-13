@@ -42,6 +42,9 @@ and open the template in the editor.
         #add Albert to the student array
         $students['a456'] = $second;
         
+        #sort the student array
+        ksort($students);
+        
         # iterate throught the student array and display each student
         foreach($students as $student)
             echo $student->toString();
