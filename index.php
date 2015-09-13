@@ -11,10 +11,13 @@ and open the template in the editor.
     </head>
     <body>
         <?php
+        # make the student class usable
         include('Student.php');
         
+        # initialize an array of students
         $students = array();
         
+        # create John Doe along with his emails and grades
         $first = new Student();
         $first->surname = "Doe";
         $first->first_name = "John";
@@ -23,8 +26,10 @@ and open the template in the editor.
         $first->add_grade(65);
         $first->add_grade(75);
         $first->add_grade(55);
+        # add John to the student array
         $students['j123'] = $first;
         
+        # create Albert Einstein along with his emails and grades
         $second = new Student();
         $second->surname = "Einstein";
         $second->first_name = "Albert";
@@ -34,8 +39,10 @@ and open the template in the editor.
         $second->add_grade(95);
         $second->add_grade(80);
         $second->add_grade(50);
+        #add Albert to the student array
         $students['a456'] = $second;
         
+        # iterate throught the student array and display each student
         foreach($students as $student)
             echo $student->toString();
         
